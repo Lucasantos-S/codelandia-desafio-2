@@ -1,0 +1,191 @@
+/*Variáveis*/
+:root {
+  --bgSite: #f6f6f6;
+  --bgCard: #ebe9ea;
+  
+  --white: #fff;
+
+  --title: #181818;
+  --text: #474747;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; 
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+/* informação superior*/
+.super-info-bg{
+  background: var(--title);
+  text-align: center;
+
+}
+.super-info-bg p{
+  color: var(--white);
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 196.19%;
+  
+}
+
+
+
+/*heade-logo*/
+
+.logo{
+  text-align: center;
+}
+.logo a{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 196.19%;
+  font-style: normal;
+  color: var(--title);
+
+}
+
+/*wallpaper*/
+.info-bg{
+  background: url(img/Group\ 1@2x.jpg) no-repeat center ;
+  background-size: cover;
+}
+.container-info{
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #fff;
+  padding: 20px;
+  
+}
+
+.container-info h1 {
+  padding-top: 130px;
+  
+  
+}
+.container-info p{
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 180%;
+  max-width: 460px;
+  padding:20px 0px 121px 0px;
+ 
+ 
+}
+/*sneakers*/
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+ 
+}
+.destaque{
+  text-align: center;
+  margin-top: 60px;
+}
+.destaque h2{
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 196.19%;
+}
+.destaque p {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 196.19%;
+  padding: 0 20px 60px 20px;
+  
+}
+
+.sneakers{
+  flex-wrap: wrap;
+  background: var(--bgCard);
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+  margin: 0 auto 40px ;
+  cursor: pointer;
+  transition: 0.9s;
+
+} 
+
+.sneakers img{
+  width: 250px;
+  height: 150;
+  margin: 0 auto;
+  padding-top: 76px;
+  
+}
+
+.sneakers:hover{
+  transform: scale(1.06);
+  
+}
+
+@media only screen and (max-width: 680px) {
+  .sneakers{
+    width: 370px;
+  }
+  .sneakers:hover{
+  transform: scale(1);
+  }
+}
+
+
+
+/*footer*/
+
+.footer{
+  background: var(--title);
+  margin-top: 40px;
+}
+.footer p {
+  color: #fff;
+  text-align: center;
+  padding: 13px;
+}
