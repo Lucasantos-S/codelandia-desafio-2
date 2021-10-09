@@ -85,6 +85,8 @@ input:focus {
 .info-bg{
   background: url(img/Group\ 1@2x.jpg) no-repeat center ;
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
 }
 .container-info{
   max-width: 1280px;
@@ -94,6 +96,7 @@ input:focus {
   flex-wrap: wrap;
   color: #fff;
   padding: 20px;
+
   
 }
 
@@ -102,16 +105,14 @@ input:focus {
   
   
 }
-.container-info p{
+.info-typed {
   font-family: 'Montserrat', sans-serif; 
   font-size: 1rem;
   font-style: normal;
   font-weight: normal;
   line-height: 180%;
   max-width: 460px;
-  padding:20px 0px 121px 0px;
- 
- 
+  margin-top: 20px;
 }
 /*sneakers*/
 .container{
@@ -120,6 +121,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  justify-content: center;
   
  
 }
@@ -143,19 +145,20 @@ input:focus {
 }
 
 .sneakers{
+  flex: 1 1 300px;
   flex-wrap: wrap;
   background: var(--bgCard);
-  width: 300px;
+  max-width: 300px;
   height: 300px;
   margin-bottom: 40px;
-  margin: 0 auto 40px ;
+  margin: 20px 5px;
   cursor: pointer;
   transition: 0.9s;
-
+  
 } 
 
 .sneakers img{
-  width: 250px;
+  max-width: 250px;
   height: 150;
   margin: 0 auto;
   padding-top: 76px;
@@ -169,12 +172,13 @@ input:focus {
 
 @media only screen and (max-width: 680px) {
   .sneakers{
-    width: 370px;
+    max-width: 380px;
   }
   .sneakers:hover{
   transform: scale(1);
   }
 }
+
 
 
 
