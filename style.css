@@ -240,7 +240,8 @@ input:focus {
  
 }
 .newsletter button:hover{
-  background: rgba(0, 0, 0, 0.842);
+  background: rgba(0, 0, 0, 0.747);
+  transition: 0.3s;
 }
 /*footer*/
 
