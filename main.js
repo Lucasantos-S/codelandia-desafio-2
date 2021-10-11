@@ -15,4 +15,4 @@
 ScrollReveal().reveal('.container-info', { delay: 200 });
 ScrollReveal().reveal('.destaque', { delay: 400 });
 ScrollReveal().reveal('.destaque-frete', { delay: 500 });
-ScrollReveal().reveal('.sneakers', { delay: 600 });
+ScrollReveal().reveal('.sneakers', { delay: 700});
