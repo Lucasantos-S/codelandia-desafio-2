@@ -165,8 +165,9 @@ input:focus {
   
 }
 
-.sneakers:hover{
+.sneakers img:hover{
   transform: scale(1.06);
+  transition: 0.3s;
   
 }
 
