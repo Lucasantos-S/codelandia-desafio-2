@@ -152,6 +152,7 @@ input:focus {
   margin-bottom: 40px;
   margin: 20px 5px;
   cursor: pointer;
+  height: 320px;
   transition: 0.9s;
   
 } 
@@ -170,17 +171,26 @@ input:focus {
   
 }
 
+
+.option-sneakers {
+  background: rgba(252, 251, 251, 0.863);
+  
+  opacity: 0.8;
+ 
+}
+
 .number{
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 1.1rem;
 
 }
 .number li {
-padding: 5px;
+padding: 1px;
 background: #fff;
 margin: 5px;
 border: 1px solid #000;
+font-size: 1rem;
 }
 
 .number li:hover{
@@ -193,12 +203,14 @@ border: 1px solid #000;
   background: #000;
   color: #fff;
   width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
+  padding: 5px;
+  font-size: 1rem;
   letter-spacing: 1px;
   cursor: pointer;
+  border-radius: 5px 5px 0px 0;
  
 }
+
 
 
 @media only screen and (max-width: 680px) {
@@ -209,6 +221,9 @@ border: 1px solid #000;
   transform: scale(1);
   }
 }
+
+
+
 
 
 
@@ -284,4 +299,24 @@ border: 1px solid #000;
   color: #fff;
   text-align: center;
   padding: 13px;
+}
+
+
+
+.js-option {
+  display: none;
+}
+.js-option.ativo {
+ display: block;
+ animation: dropdown .5s forwards;
+}
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    max-height: 0;
+}
+to {
+    max-height: 200px;
+    opacity: 1;
+}
 }
