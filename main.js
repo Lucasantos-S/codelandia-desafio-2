@@ -19,16 +19,17 @@ ScrollReveal().reveal('.sneakers', { delay: 700});
 
 
 
-const optionSneakers = document.querySelectorAll('.js-option')
-const delet = document.querySelector('body')
 
 
 
 
 
 
+function optiondown() {
 
 const container = document.querySelectorAll('.js-sneakers')
+
+if(container.length) {
 
 function activeClass (){
        this.children[1].classList.add('ativo')
@@ -44,3 +45,9 @@ container.forEach((item) => {
       item.addEventListener('mouseout', removeClass)
       
 })
+
+}
+
+}
+
+optiondown()
