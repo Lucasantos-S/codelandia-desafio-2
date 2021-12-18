@@ -343,7 +343,22 @@ to {
   background: white;
   height: 400px;
   position: relative;
+  border-radius: 3px;
+  position: relative;
   
+}
+
+.modal::after {
+  content: ' ';
+  clip-path: ellipse(47% 23% at 50% 50%);
+  background: var(--bgCard);
+  width: 350px;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  top: 40px;
+  left: 0px;
+  z-index: 0;
 }
 @keyframes modal {
   from {
@@ -359,6 +374,7 @@ to {
 .modal-container.active {
   display: flex;
   animation: modal .8s forwards;
+  
 }
 .fechar {
 position: absolute;
@@ -374,8 +390,14 @@ cursor: pointer;
   max-width: 350px;
  margin-top: 70px;
 }
+.tenis-modal img {
+  z-index: 1000;
+  position: relative;
+}
 
 .tenis-modal button {
-  
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 2rem;
   height: 70px;
+  border-radius: 2px;
 }

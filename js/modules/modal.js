@@ -9,25 +9,24 @@ const ArrayTenis = [...containerTenis] // passando pra Array todos os containers
 
 if(containerModal && containerTenis && modal ) {
 
-    ArrayTenis.forEach((item, index) => {  //dando o loot em todos os container dos sneakers
+     function ativarModal(event) { // adicionar ou remover a class ativo
+     containerModal.classList.toggle(activeModal)
+     }
+     ArrayTenis.forEach((item, index) => {  //dando o loot em todos os container dos sneakers
         item.addEventListener('click', (event)=>{
          ativarModal() // ativando o modal apos clicar no item
          pushModal(item) // passando o item dentro do modal
         })
      })
-     
+
      function pushModal(event) {
-         modal.innerHTML = ' ' //reiniciando o html
-         const conteudoModal = document.createElement('div') // criando uma div 
-         conteudoModal.classList.add('tenis-modal') //adicionando uma class nessa div
-         conteudoModal.innerHTML = event.innerHTML // pegando o html dos sneakers
-         modal.appendChild(conteudoModal) // adicionando dentro do modal a div com o conteudo html acima
-         return modal
-     } 
-     
-     function ativarModal(event) { // adicionar ou remover a class ativo
-     containerModal.classList.toggle(activeModal)
-     }
+        modal.innerHTML = ' ' //reiniciando o html
+        const conteudoModal = document.createElement('div') // criando uma div 
+        conteudoModal.classList.add('tenis-modal') //adicionando uma class nessa div
+        conteudoModal.innerHTML = event.innerHTML // pegando o html dos sneakers
+        modal.appendChild(conteudoModal) // adicionando dentro do modal a div com o conteudo html acima
+        return modal
+    } 
      
      function clickForaModal (event) { // fehcar quando clicar fora do modal
          if(event.target === this)
