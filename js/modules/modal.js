@@ -1,44 +1,40 @@
 export default function initModal() {
-
-
-const container = document.querySelectorAll('.js-sneakers')
 const containerModal = document.querySelector('[data-modal="container"]')
 const fecharModal = document.querySelector('.fechar')
 const containerTenis =document.querySelectorAll('.sneakers')
 const modal = document.querySelector('.modal-tenis')
+const activeModal = 'active'
  
-const ArrayTenis = [...containerTenis]
+const ArrayTenis = [...containerTenis] // passando pra Array todos os containers dos sneakers
 
-ArrayTenis.forEach((item, index) => {
-   item.addEventListener('click', (event)=>{
-    pushModal(item)
-   })
-})
+if(containerModal && containerTenis && modal ) {
 
-function pushModal(event) {
-    modal.innerHTML = ' '
-    const conteudoModal = document.createElement('div') 
-    const conteudo = containerTenis
-    conteudoModal.classList.add('tenis-modal')
-    conteudoModal.innerHTML = event.innerHTML
-    modal.appendChild(conteudoModal)
-    return modal
-} 
-
-
-function ativarModal(event,item,index) {
-containerModal.classList.toggle('ativo')
-}
-
-
-container.forEach((item, index) => {
-     item.addEventListener('click', ()=> {
-              ativarModal(index,item)
-              console.log(index)
+    ArrayTenis.forEach((item, index) => {  //dando o loot em todos os container dos sneakers
+        item.addEventListener('click', (event)=>{
+         ativarModal() // ativando o modal apos clicar no item
+         pushModal(item) // passando o item dentro do modal
+        })
      })
-})
-
-fecharModal.addEventListener('click', ativarModal )
-
-
+     
+     function pushModal(event) {
+         modal.innerHTML = ' ' //reiniciando o html
+         const conteudoModal = document.createElement('div') // criando uma div 
+         conteudoModal.classList.add('tenis-modal') //adicionando uma class nessa div
+         conteudoModal.innerHTML = event.innerHTML // pegando o html dos sneakers
+         modal.appendChild(conteudoModal) // adicionando dentro do modal a div com o conteudo html acima
+         return modal
+     } 
+     
+     function ativarModal(event) { // adicionar ou remover a class ativo
+     containerModal.classList.toggle(activeModal)
+     }
+     
+     function clickForaModal (event) { // fehcar quando clicar fora do modal
+         if(event.target === this)
+         ativarModal(event)
+     }
+     
+     fecharModal.addEventListener('click', ativarModal )
+     containerModal.addEventListener('click', clickForaModal)
+     }
 }
